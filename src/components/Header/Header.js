@@ -35,6 +35,7 @@ const Header = () => {
           className={classes.root}
         >
           <BottomNavigationAction
+            onClick={() => history.push("/")}
             style={{ color: "white" }}
             label="Home"
             icon={<Home />}
