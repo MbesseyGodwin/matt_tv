@@ -7,6 +7,7 @@ import Series from "./Pages/Series/Series";
 import Trending from "./Pages/Trending/Trending";
 import Search from "./Pages/Search/Search";
 import Login from "./Pages/Login/Login";
+import { Upload } from "./Pages/Uploads/Upload";
 import { Container } from "@material-ui/core";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/series" component={Series} />
             <Route path="/search" component={Search} />
             <Route path="/login" component={Login} />
+            <Route path="/upload" component={Upload} />
           </Switch>
         </Container>
       </div>

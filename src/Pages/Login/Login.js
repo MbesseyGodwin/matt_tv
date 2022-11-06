@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import Person from "@material-ui/icons/Person";
+import { Redirect, useHistory } from "react-router-dom";
 
 const Login = () => {
+  const [username, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const [loginAuth, setLoginAuth] = useState(true);
+  const [submitValue, setSubmitValue] = useState("Login Now");
+  let history = useHistory();
+
+  function validateFormFields() {
+    if (loginAuth !== true) {
+      return "btn btn-danger form-control";
+    }
+    if (username.length >= 6 && password.length >= 6) {
+      return "btn btn-success form-control";
+    } else {
+      return "d-none";
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (username === "godwin") {
+      console.log(username);
+      history.push("/upload");
+    } else {
+      setSubmitValue('Failed Try Again')
+      setLoginAuth(false);
+    }
+  }
   return (
     <div className="row" style={{ placeContent: "center" }}>
       <div className="col-sm-12 col-md-12 col-lg-6">
         <div className="container bg-dark p-3">
           <div className="d-flex justify-content-between">
-              <Person className="text-info" />
-              <div className="text-center h6 text-uppercase">login now</div>
+            <Person className="text-info" />
+            <div className="text-center h6 text-uppercase">login now</div>
           </div>
           <hr />
-          <form action="#">
+
+          <form onSubmit={handleSubmit}>
             <div>
               <label htmlFor="username" className="text-capitalize">
                 Username
@@ -23,6 +52,8 @@ const Login = () => {
                 id="username"
                 className="form-control"
                 required
+                value={username}
+                onChange={(e) => setUserName(e.target.value)}
               />
             </div>
             <hr />
@@ -37,6 +68,8 @@ const Login = () => {
                 id="password"
                 className="form-control"
                 required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <hr />
@@ -45,8 +78,8 @@ const Login = () => {
                 type="submit"
                 name="submit"
                 id="submit"
-                className="btn form-control"
-                style={{ backgroundColor: "#FC01CE" }}
+                className={validateFormFields()}
+                value={submitValue}
               />
             </div>
           </form>
