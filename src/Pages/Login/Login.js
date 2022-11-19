@@ -22,7 +22,7 @@ const Login = () => {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (username === "godwin") {
+    if (username === "MATTHEW" && password === "123321") {
       console.log(username);
       history.push("/upload");
     } else {
@@ -52,6 +52,7 @@ const Login = () => {
                 id="username"
                 className="form-control"
                 required
+                autoComplete="off"
                 value={username}
                 onChange={(e) => setUserName(e.target.value)}
               />
@@ -62,12 +63,13 @@ const Login = () => {
                 password
               </label>
               <input
-                type="text"
+                type="password"
                 placeholder="Password"
                 name="password"
                 id="password"
                 className="form-control"
                 required
+                autoComplete="off"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />

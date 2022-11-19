@@ -13,7 +13,7 @@ const useStyles = makeStyles({
   root: {
     width: "100%",
     // position: "fixed",
-    backgroundColor: "#FC01CE",
+    backgroundColor: "#08d215",
     zIndex: 100,
   },
 });
@@ -31,7 +31,7 @@ const Header = () => {
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
-          showLabels
+          // showLabels
           className={classes.root}
         >
           <BottomNavigationAction

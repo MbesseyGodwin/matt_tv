@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     width: "100%",
     position: "fixed",
     bottom: 0,
-    backgroundColor: "#FC01CE",
+    backgroundColor: "#08d215",
     zIndex: 100,
   },
 });
@@ -27,13 +27,14 @@ export default function SimpleBottomNavigation() {
     if (value === 0) {
       history.push("/");
     } else if (value === 1) {
-      history.push("/movies");
+      history.push("/trending");
     } else if (value === 2) {
-      history.push("/series");
+      history.push("/movies");
     } else if (value === 3) {
+      history.push("/series");
+    } else if (value === 4) {
       history.push("/search");
     }
-    
   }, [value, history]);
 
   return (
@@ -42,9 +43,15 @@ export default function SimpleBottomNavigation() {
       onChange={(event, newValue) => {
         setValue(newValue);
       }}
-      showLabels
+      // showLabels
       className={classes.root}
     >
+      <BottomNavigationAction
+        style={{ color: "white" }}
+        label="Home"
+        icon={<WhatshotIcon />}
+        className="d-none"
+      />
       <BottomNavigationAction
         style={{ color: "white" }}
         label="Trending"
