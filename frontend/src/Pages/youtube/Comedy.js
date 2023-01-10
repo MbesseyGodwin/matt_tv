@@ -49,6 +49,20 @@ const Comdey = () => {
           ></iframe>
           <hr />
         </div>
+
+        <div className="col-lg-4 col-sm-12">
+          <p className="text-capitalize">oga Matt the foolish man</p>
+          <iframe
+            width=""
+            height="315"
+            src="https://www.youtube.com/embed/2g-q0vxKWXg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+          <hr />
+        </div>
       </div>
     </div>
   );
