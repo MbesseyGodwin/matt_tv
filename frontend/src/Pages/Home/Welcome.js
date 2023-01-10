@@ -3,6 +3,11 @@ import React from "react";
 import "./welcome.css"
 import { useHistory } from "react-router-dom";
 
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+
 const Welcome = () => {
   const history = useHistory();
   return (
@@ -18,10 +23,10 @@ const Welcome = () => {
         <hr />
         <div class="card text-white bg-default">
           <div class="card-body">
-            <a href="https://youtube.com/channel/UCKDJ1dGcerJRmlRDSbysN9w" className="m-2 btn btn-danger text-decoration-none">YOUTUBE</a>
-            <a href="https://www.facebook.com/profile.php?id=100087515694356&mibextid=ZbWKwL" className="m-2 btn btn-primary text-decoration-none">FACEBOOK</a>
-            <a href="#" className="m-2 btn btn-success text-decoration-none">WHATSAPP</a>
-            <a href="#" className="m-2 btn btn-warning text-decoration-none">INSTAGRAM</a>
+            <a href="https://youtube.com/channel/UCKDJ1dGcerJRmlRDSbysN9w" className="m-2 btn btn-danger text-decoration-none"><YouTubeIcon /> YOUTUBE</a>
+            <a href="https://www.facebook.com/profile.php?id=100087515694356&mibextid=ZbWKwL" className="m-2 btn btn-primary text-decoration-none"><FacebookIcon /> FACEBOOK</a>
+            <a href="#" className="m-2 btn btn-success text-decoration-none"><WhatsAppIcon /> WHATSAPP</a>
+            <a href="#" className="m-2 btn btn-warning text-decoration-none"><InstagramIcon /> INSTAGRAM</a>
           </div>
         </div>
       </div>

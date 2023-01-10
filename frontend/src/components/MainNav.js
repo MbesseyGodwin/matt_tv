@@ -36,6 +36,7 @@ export default function SimpleBottomNavigation() {
       history.push("/search");
     }
   }, [value, history]);
+  
 
   return (
     <BottomNavigation
